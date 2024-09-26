@@ -1,0 +1,525 @@
+<div class="p-5 w-10 left-0">
+  <img src="assets/images/br-round.png" (click)="setLanguage('pt-BR');" class="w-1 p-5" alt="Bandeira Brasil" />
+  <img src="assets/images/us-round.png" (click)="setLanguage('en');" class="w-1 p-5" alt="Bandeira Estados Unidos" />
+  <img src="assets/images/es-round.png" (click)="setLanguage('es');" class="w-1 p-5" alt="Bandeira Espanha" />
+</div>
+
+<p-tabView>
+  <!-- Aba de jogar -->
+  <p-tabPanel class="text-color-blue-700 text-5x1" header="{{ 'play' | translate }}">
+    <p>
+      <router-outlet></router-outlet>
+    </p>
+  </p-tabPanel>
+
+  <!-- Exibindo o idioma selecionado -->
+  <p>{{ idiomaSelecionado }}</p>
+
+  <!-- Regras do Jogo da Velha -->
+  <p-tabPanel header="{{ 'rules-tic-tac-toe' | translate }}">
+    <div class="content">
+      <h1>{{ 'tic_tac_toe.title' | translate }}</h1>
+      <br>
+      <h2>{{ 'tic_tac_toe.objective' | translate }}</h2>
+      <p>{{ 'tic_tac_toe.objective_text' | translate }}</p>
+      <h2>{{ 'tic_tac_toe.board' | translate }}</h2>
+      <p>{{ 'tic_tac_toe.board_text' | translate }}</p>
+      <h2>{{ 'tic_tac_toe.pieces' | translate }}</h2>
+      <p>{{ 'tic_tac_toe.pieces_text' | translate }}</p>
+      <h2>{{ 'tic_tac_toe.rules' | translate }}</h2>
+      <ul>
+        <li>{{ 'tic_tac_toe.rule1' | translate }}</li>
+        <li>{{ 'tic_tac_toe.rule2' | translate }}</li>
+      </ul>
+      <h2>{{ 'tic_tac_toe.end_game' | translate }}</h2>
+      <p>{{ 'tic_tac_toe.end_game_text' | translate }}</p>
+    </div>
+  </p-tabPanel>
+
+  <!-- Regras do Connect 4 -->
+  <p-tabPanel header="{{ 'rules-connect4' | translate }}">
+    <div class="content">
+      <h1>{{ 'connect4_game.title' | translate }}</h1>
+      <br>
+      <h2>{{ 'connect4_game.objective' | translate }}</h2>
+      <p>{{ 'connect4_game.objective_text' | translate }}</p>
+      <h2>{{ 'connect4_game.board' | translate }}</h2>
+      <p>{{ 'connect4_game.board_text' | translate }}</p>
+      <h2>{{ 'connect4_game.pieces' | translate }}</h2>
+      <p>{{ 'connect4_game.pieces_text' | translate }}</p>
+      <h2>{{ 'connect4_game.rules' | translate }}</h2>
+      <ul>
+        <li>{{ 'connect4_game.rule1' | translate }}</li>
+        <li>{{ 'connect4_game.rule2' | translate }}</li>
+      </ul>
+      <h2>{{ 'connect4_game.end_game' | translate }}</h2>
+      <p>{{ 'connect4_game.end_game_text' | translate }}</p>
+    </div>
+  </p-tabPanel>
+
+  <!-- Especificação de Requisitos -->
+  <p-tabPanel header="{{ 'LIGUE4_REQUIREMENTS.menu' | translate }}">
+    <div class="content">
+      <h2>{{ 'LIGUE4_REQUIREMENTS.TITLE' | translate }}</h2>
+
+      <h3>{{ 'LIGUE4_REQUIREMENTS.FUNCTIONAL' | translate }}</h3>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_001.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_001.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_002.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_002.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_003.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_003.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_001.TITLE' | translate }}</li>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_002.TITLE' | translate }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_004.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_004.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_005.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+          <li>{{
+            'REQUIREMENTS_NON_FUNCTIONAL.NF_003.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_004.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_005.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_005.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_001.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_002.TITLE' | translate }}</li>
+          <li>{{
+            'REQUIREMENTS_NON_FUNCTIONAL.NF_003.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_006.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_006.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_003.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_002.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_007.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_007.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_008.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_008.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_009.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_009.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_010.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_010.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'LIGUE4_REQUIREMENTS.RF_011.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'LIGUE4_REQUIREMENTS.RF_011.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <br>
+      <h3>{{ 'REQUIREMENTS_NON_FUNCTIONAL.TITLE' | translate }}</h3>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{
+          'REQUIREMENTS_NON_FUNCTIONAL.NF_001.DESCRIPTION'
+          | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.IMPORTANT' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>
+            {{ 'LIGUE4_REQUIREMENTS.RF_001.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_002.TITLE' | translate }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_002.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{
+          'REQUIREMENTS_NON_FUNCTIONAL.NF_002.DESCRIPTION'
+          | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_006.TITLE' | translate }}</li>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_007.TITLE' | translate }}</li>
+          <li>{{'LIGUE4_REQUIREMENTS.RF_008.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_003.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{
+          'REQUIREMENTS_NON_FUNCTIONAL.NF_003.DESCRIPTION'
+          | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_001.TITLE' | translate }}: {{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_003.RESPONSE' |
+            translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_004.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{
+          'REQUIREMENTS_NON_FUNCTIONAL.NF_004.DESCRIPTION'
+          | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_005.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{
+          'REQUIREMENTS_NON_FUNCTIONAL.NF_005.DESCRIPTION'
+          | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'LIGUE4_REQUIREMENTS.RF_006.TITLE' | translate }}</li>
+        </ul>
+      </div>
+    </div>
+  </p-tabPanel>
+
+  <p-tabPanel header="{{ 'VELHA_REQUIREMENTS.menu' | translate }}">
+    <div class="content">
+      <h2>{{ 'VELHA_REQUIREMENTS.TITLE' | translate }}</h2>
+
+      <h3>{{ 'VELHA_REQUIREMENTS.FUNCTIONAL' | translate }}</h3>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_001.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_001.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_002.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_002.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_003.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_003.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_001.TITLE' | translate }}</li>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_002.TITLE' | translate }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_004.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_004.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_005.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_003.TITLE' | translate }}</li>
+          <li>{{
+            'REQUIREMENTS_NON_FUNCTIONAL.NF_004.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_005.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_005.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_001.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_003.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_006.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_006.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_003.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_002.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_007.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_007.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_008.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_008.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_009.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_009.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }} </li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.DESCRIPTION' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_010.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_010.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'VELHA_REQUIREMENTS.RF_011.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'VELHA_REQUIREMENTS.RF_011.DESCRIPTION' |
+          translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_002.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <br>
+      <h3>{{ 'NF_SECTION.TITLE' | translate }}</h3>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_001.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{
+          'REQUIREMENTS_NON_FUNCTIONAL.NF_001.DESCRIPTION' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.IMPORTANT' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_001.TITLE' | translate }}</li>
+          <li>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_002.TITLE' | translate }}</li>
+          <li> {{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_002.DESCRIPTION' | translate }}.
+          </li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_002.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{
+          'REQUIREMENTS_NON_FUNCTIONAL.NF_002.DESCRIPTION' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_006.TITLE' | translate }}</li>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_007.TITLE' | translate }}</li>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_008.TITLE' | translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_003.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{
+          'REQUIREMENTS_NON_FUNCTIONAL.NF_003.DESCRIPTION' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_001.TITLE' | translate }}: {{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_003.TITLE' |
+            translate }}</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_004.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{
+          'REQUIREMENTS_NON_FUNCTIONAL.NF_004.DESCRIPTION' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_001.TITLE' | translate }}.</li>
+        </ul>
+      </div>
+
+      <div class="requirement">
+        <h4>{{ 'REQUIREMENTS_NON_FUNCTIONAL.NF_005.TITLE' | translate }}</h4>
+        <p><strong>{{ 'REQUIREMENTS.DESCRIPTION' | translate }}:</strong> {{ 'NF-005.DESCRIPTION' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.PRIORITY' | translate }}:</strong> {{ 'REQUIREMENTS.ESSENTIAL' | translate }}</p>
+        <p><strong>{{ 'REQUIREMENTS.ASSOCIATION' | translate }}:</strong></p>
+        <ul>
+          <li>{{ 'VELHA_REQUIREMENTS.RF_006.TITLE' | translate }}.</li>
+        </ul>
+      </div>
+
+    </div>
+  </p-tabPanel>
+
+  <!-- Termo de Abertura -->
+  <p-tabPanel header="{{ 'project_opening.menu' | translate }}">
+    <div class="content">
+      <h2>{{ 'project_opening.title' | translate }}</h2>
+      <p>{{ 'project_opening.sponsor' | translate }}: PROF. ME. ELENILTON DEZENGRINI</p>
+      <p>{{ 'project_opening.project_manager' | translate }}: {{ 'project_opening.self_managed_team' | translate }}</p>
+      <p>{{ 'project_opening.date' | translate }}: 31/08/2024</p>
+      <h3>{{ 'project_opening.overview' | translate }}</h3>
+      <p>{{ 'project_opening.overview_text' | translate }}</p>
+      <h3>{{ 'project_opening.objectives' | translate }}</h3>
+      <ul>
+        <li>{{ 'project_opening.objective1' | translate }}</li>
+        <li>{{ 'project_opening.objective2' | translate }}</li>
+        <li>{{ 'project_opening.objective3' | translate }}</li>
+      </ul>
+      <h3>{{ 'project_opening.scope' | translate }}</h3>
+      <p>{{ 'project_opening.scope_text' | translate }}</p>
+      <h3>{{ 'project_opening.budget' | translate }}</h3>
+      <p>{{ 'project_opening.budget_text' | translate }}</p>
+      <h3>{{ 'project_opening.schedule' | translate }}</h3>
+      <p>{{ 'project_opening.schedule_text' | translate }}</p>
+      <ul>
+        <li>{{ 'project_opening.phase1' | translate }}</li>
+        <li>{{ 'project_opening.phase2' | translate }}</li>
+        <li>{{ 'project_opening.phase3' | translate }}</li>
+        <li>{{ 'project_opening.phase4' | translate }}</li>
+        <li>{{ 'project_opening.phase5' | translate }}</li>
+      </ul>
+      <h3>{{ 'project_opening.approval' | translate }}</h3>
+      <p>{{ 'project_opening.approval_text' | translate }}</p>
+    </div>
+  </p-tabPanel>
+
+  <p-tabPanel header="DOCUMENTAÇÃO">
+    <div class="content">
+      <h2>Documentação do Projeto</h2>
+      <iframe src="/assets/documentation/index.html" style="width: 100%; height: 80vh; border: none;">
+      </iframe>
+    </div>
+  </p-tabPanel>
+
+
+</p-tabView>
